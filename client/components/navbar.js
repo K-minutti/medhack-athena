@@ -1,10 +1,10 @@
 import React from "react";
-
+import { Segment } from "semantic-ui-react";
 const Navbar = () => {
   return (
-    <div>
+    <Segment raised>
       <h1>ATHENA</h1>
-    </div>
+    </Segment>
   );
 };
 
