@@ -12,8 +12,16 @@ const AuthForm = (props) => {
       <Segment raised>
         <Form onSubmit={handleSubmit} name={name} className="login-signup">
           <Form.Group unstackable widths={2}>
-            <Form.Input label="First name" placeholder="First name" />
-            <Form.Input label="Last name" placeholder="Last name" />
+            <Form.Input
+              name="firstName"
+              label="First Name"
+              placeholder="First name"
+            />
+            <Form.Input
+              name="lastName"
+              label="Last Name"
+              placeholder="Last name"
+            />
           </Form.Group>
           <Form.Group widths={2}>
             <Form.Input label="Location" placeholder="City" />
@@ -22,9 +30,15 @@ const AuthForm = (props) => {
           <Form.Group widths={2}>
             <Form.Input
               label="Email"
+              name="email"
               placeholder="Enter a valid email address"
             />
-            <Form.Input label="Password" placeholder="Minimum 5 characters" />
+            <Form.Input
+              label="Password"
+              name="password"
+              type="password"
+              placeholder="Minimum 5 characters"
+            />
           </Form.Group>
           <Form.Checkbox label="I agree to the Terms and Conditions" />
           <Button type="submit">{displayName}</Button>
@@ -57,7 +71,9 @@ const mapDispatch = (dispatch) => {
       const formName = evt.target.name;
       const email = evt.target.email.value;
       const password = evt.target.password.value;
-      dispatch(auth(email, password, formName));
+      const firstName = evt.target.firstName.value;
+      const lastName = evt.target.lastName.value;
+      dispatch(auth(email, password, firstName, lastName, formName));
     },
   };
 };

@@ -18,10 +18,11 @@ const User = db.define("user", {
       notEmpty: true,
     },
   },
-  memberType: {
-    type: Sequelize.ENUM,
-    values: ["regular", "healthcare-professional"],
-  },
+  // memberType: {
+  //   type: Sequelize.ENUM,
+  //   values: ["regular", "healthcare-professional"],
+  //   defaultValue: "regular",
+  // },
   password: {
     type: Sequelize.STRING,
     get() {

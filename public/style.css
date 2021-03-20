@@ -4,6 +4,10 @@
   font-size: x-large;
 }
 
+.landing {
+  text-align: center;
+}
+
 .menu {
   margin: 20px;
 }
