@@ -8,7 +8,8 @@ import history from "./history";
 import "./socket";
 
 ReactDOM.render(
-  <Provider store={store}>
+  // <Provider store={store}>
+  <Provider>
     <Router history={history}>
       <App />
     </Router>

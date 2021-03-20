@@ -12,6 +12,10 @@ const app = express();
 const socketio = require("socket.io");
 module.exports = app;
 
+// if (process.env.NODE_ENV === "test") {
+//   after("close the session store", () => sessionStore.stopExpiringSessions());
+// }
+
 if (process.env.NODE_ENV !== "production") require("../secrets");
 
 // passport registration

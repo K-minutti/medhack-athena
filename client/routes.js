@@ -1,4 +1,5 @@
 import React from "react";
+import { Base } from "./components";
 import { withRouter, Route, Switch } from "react-router-dom";
 
 class Routes extends React.Component {
@@ -10,3 +11,5 @@ class Routes extends React.Component {
     );
   }
 }
+
+export default Routes;
