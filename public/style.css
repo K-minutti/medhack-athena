@@ -1,3 +1,13 @@
-body {
-  background-color: #239e79;
+.nav {
+  width: 100%;
+  padding: 20px;
+  font-size: x-large;
+}
+
+.menu {
+  margin: 20px;
+}
+
+.login-signup {
+  padding: 32px;
 }
