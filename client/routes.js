@@ -3,7 +3,15 @@ import { connect } from "react-redux";
 import { withRouter, Route, Switch } from "react-router-dom";
 import { me } from "./store";
 import PropTypes from "prop-types";
-import { Base, Login, Onboard, Signup } from "./components";
+import {
+  Base,
+  Login,
+  Onboard,
+  Signup,
+  Home,
+  Browse,
+  Forums,
+} from "./components";
 
 class Routes extends React.Component {
   componentDidMount() {
@@ -16,7 +24,16 @@ class Routes extends React.Component {
         <Route exact path="/" component={Base} />
         <Route path="/login" component={Login} />
         <Route exact path="/signup" component={Signup} />
-        {isLoggedIn ? <Route exact path="/onboard" component={Onboard} /> : ""}
+        <Route exact path="/browse" component={Browse} />
+        <Route exact path="/forums" component={Forums} />
+        {isLoggedIn ? (
+          <Switch>
+            <Route exact path="/onboard" component={Onboard} />
+            <Route exact path="/home" component={Home} />
+          </Switch>
+        ) : (
+          ""
+        )}
       </Switch>
     );
   }

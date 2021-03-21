@@ -10,12 +10,12 @@ const Base = () => {
       <h1 style={{ color: "#303030" }}>Welcome to Athena</h1>
       <h3 style={{ color: "#303030" }}>
         The community that empowers you with the tools you need to navigate
-        medical information
+        medical information.
       </h3>
       <Divider hidden />
       <Button
         size="huge"
-        raised
+        href="/signup"
         style={{ backgroundColor: "#239e79", color: "white" }}
       >
         Sign Up Now

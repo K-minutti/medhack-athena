@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import { Button, Container, Form, Segment } from "semantic-ui-react";
+import { Button, Container, Divider, Form, Segment } from "semantic-ui-react";
 import { auth } from "../store";
 
 const AuthForm = (props) => {
@@ -11,36 +11,56 @@ const AuthForm = (props) => {
     <Container>
       <Segment raised>
         <Form onSubmit={handleSubmit} name={name} className="login-signup">
-          <Form.Group unstackable widths={2}>
-            <Form.Input
-              name="firstName"
-              label="First Name"
-              placeholder="First name"
-            />
-            <Form.Input
-              name="lastName"
-              label="Last Name"
-              placeholder="Last name"
-            />
-          </Form.Group>
-          <Form.Group widths={2}>
-            <Form.Input label="Location" placeholder="City" />
-            <Form.Input label="Phone" placeholder="Optional" />
-          </Form.Group>
-          <Form.Group widths={2}>
-            <Form.Input
-              label="Email"
-              name="email"
-              placeholder="Enter a valid email address"
-            />
-            <Form.Input
-              label="Password"
-              name="password"
-              type="password"
-              placeholder="Minimum 5 characters"
-            />
-          </Form.Group>
-          <Form.Checkbox label="I agree to the Terms and Conditions" />
+          <h2>{name === "signup" ? `Sign Up` : `Log In`}</h2>
+          {name != "signup" ? (
+            <Form.Group widths={2}>
+              <Form.Input
+                label="Email"
+                name="email"
+                placeholder="Enter a valid email address"
+              />
+              <Form.Input
+                label="Password"
+                name="password"
+                type="password"
+                placeholder="Minimum 5 characters"
+              />
+            </Form.Group>
+          ) : (
+            <div>
+              <Form.Group unstackable widths={2}>
+                <Form.Input
+                  name="firstName"
+                  label="First Name"
+                  placeholder="First name"
+                />
+                <Form.Input
+                  name="lastName"
+                  label="Last Name"
+                  placeholder="Last name"
+                />
+              </Form.Group>
+              <Form.Group widths={2}>
+                <Form.Input label="Location" placeholder="City" />
+                <Form.Input label="Phone" placeholder="Optional" />
+              </Form.Group>
+              <Form.Group widths={2}>
+                <Form.Input
+                  label="Email"
+                  name="email"
+                  placeholder="Enter a valid email address"
+                />
+                <Form.Input
+                  label="Password"
+                  name="password"
+                  type="password"
+                  placeholder="Minimum 5 characters"
+                />
+              </Form.Group>
+              <Form.Checkbox label="I agree to the Terms and Conditions" />
+            </div>
+          )}
+          <Divider hidden />
           <Button type="submit">{displayName}</Button>
           {error && error.response && <div> {error.response.data} </div>}
         </Form>
