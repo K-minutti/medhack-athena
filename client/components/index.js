@@ -6,5 +6,7 @@ export { default as Question } from "./question";
 export { default as Home } from "./home";
 export { default as Upload } from "./upload";
 export { default as Forums } from "./forum";
+export { default as Post } from "./Post";
+export { default as Research } from "./Research";
 export { default as ForumThreads } from "./forumThreads";
 export { Login, Signup } from "./authForm";

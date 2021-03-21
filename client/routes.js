@@ -11,9 +11,11 @@ import {
   Home,
   Browse,
   Forums,
+  Post,
   ForumThreads,
   Question,
   Upload,
+  Research,
 } from "./components";
 
 class Routes extends React.Component {
@@ -32,7 +34,8 @@ class Routes extends React.Component {
         <Route exact path="/upload" component={Upload} />
         <Route exact path="/forums" component={Forums} />
         <Route exact path="/forums/inflammation" component={ForumThreads} />
-
+        <Route exact path="/forums/inflammation/post:1" component={Post} />
+        <Route exact path="/research" component={Research} />
         {isLoggedIn ? (
           <Switch>
             <Route exact path="/onboard" component={Onboard} />

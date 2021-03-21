@@ -6,6 +6,7 @@ import {
   Icon,
   Image,
   Input,
+  Form,
   Item,
   Label,
   Segment,
@@ -26,7 +27,7 @@ const paragraphFour =
 const ForumThreads = () => (
   <Container>
     <div style={{ flexDirection: "inline-block" }}>
-      <h1>Inflammation</h1>
+      <h1>/Inflammation</h1>
       <Button
         style={{ backgroundColor: "#239e79", color: "white" }}
         floated="right"
@@ -42,23 +43,27 @@ const ForumThreads = () => (
       </Button>
     </div>
     <Segment>
+      <h3>Post</h3>
       <Form>
-        <Form.TextArea label="Post" placeholder="Create a post in this forum" />
+        <Form.TextArea label="" placeholder="Create a post in this forum" />
       </Form>
     </Segment>
     <Divider />
     <div style={{ padding: "20px" }}>
       <Divider hidden />
+      <h3>Posts</h3>
       <Item.Group divided>
         <Item>
           <Item.Content>
             <Item.Meta>
-              <span className="cinema">Union Square 14</span>
+              <a href="/forums/inflammation/post:1">
+                <h3>Inflammation after eating meat</h3>
+              </a>
             </Item.Meta>
             <Item.Description>{paragraphOne}</Item.Description>
 
             <Item.Extra>
-              <Label>IMAX</Label>
+              <Label>Active</Label>
               <Label icon="globe" content="Additional Languages" />
             </Item.Extra>
           </Item.Content>
@@ -67,12 +72,15 @@ const ForumThreads = () => (
         <Item>
           <Item.Content>
             <Item.Meta>
-              <span className="cinema">IFC Cinema</span>
+              <a href="/forums/inflammation/post:1">
+                <h3>Anti-Inflammatory Perscription</h3>
+              </a>
             </Item.Meta>
             <Item.Description>{paragraphTwo}</Item.Description>
 
             <Item.Extra>
-              <Label>Limited</Label>
+              <Label>Favorite</Label>
+              <Label icon="globe" content="Additional Languages" />
             </Item.Extra>
           </Item.Content>
         </Item>
@@ -80,7 +88,9 @@ const ForumThreads = () => (
         <Item>
           <Item.Content>
             <Item.Meta>
-              <span className="cinema">IFC Cinema</span>
+              <a href="/forums/inflammation/post:1">
+                <h3>Inflammation over 50</h3>
+              </a>
             </Item.Meta>
             <Item.Description>{paragraphThree}</Item.Description>
 
@@ -93,7 +103,9 @@ const ForumThreads = () => (
         <Item>
           <Item.Content>
             <Item.Meta>
-              <span className="cinema">IFC Cinema</span>
+              <a href="/forums/inflammation/post:1">
+                <h3>Teens at Risk of ...</h3>
+              </a>
             </Item.Meta>
             <Item.Description>{paragraphFour}</Item.Description>
 
