@@ -8,6 +8,11 @@
   text-align: center;
 }
 
+.question {
+  /* text-align: center; */
+  padding: 40px;
+}
+
 .menu {
   margin: 20px;
 }

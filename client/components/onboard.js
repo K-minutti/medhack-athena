@@ -13,27 +13,27 @@ import top from "../assets/instant-info.svg";
 import bottom from "../assets/sign-in.svg";
 
 const topicOptions = [
-  { key: "a", text: "Arabic", value: "Arabic" },
-  { key: "b", text: "Chinese", value: "Chinese" },
-  { key: "c", text: "Danish", value: "Danish" },
-  { key: "d", text: "Dutch", value: "Dutch" },
-  { key: "e", text: "English", value: "English" },
-  { key: "f", text: "French", value: "French" },
-  { key: "g", text: "German", value: "German" },
-  { key: "h", text: "Greek", value: "Greek" },
-  { key: "i", text: "Hungarian", value: "Hungarian" },
-  { key: "j", text: "Italian", value: "Italian" },
-  { key: "k", text: "Japanese", value: "Japanese" },
-  { key: "l", text: "Korean", value: "Korean" },
-  { key: "n", text: "Lithuanian", value: "Lithuanian" },
-  { key: "o", text: "Persian", value: "Persian" },
-  { key: "p", text: "Polish", value: "Polish" },
-  { key: "q", text: "Portuguese", value: "Portuguese" },
-  { key: "r", text: "Russian", value: "Russian" },
-  { key: "s", text: "Spanish", value: "Spanish" },
-  { key: "t", text: "Swedish", value: "Swedish" },
-  { key: "u", text: "Turkish", value: "Turkish" },
-  { key: "v", text: "Vietnamese", value: "Vietnamese" },
+  { key: "a", text: "Arthritis", value: "a" },
+  { key: "b", text: "Joint Pain", value: "b" },
+  { key: "c", text: "Back Pain", value: "c" },
+  { key: "d", text: "Breast Cancer", value: "d" },
+  { key: "e", text: "Pediatric", value: "e" },
+  { key: "f", text: "Orthopedics", value: "f" },
+  { key: "g", text: "Dental", value: "g" },
+  { key: "h", text: "Vision", value: "h" },
+  { key: "i", text: "Artery Health", value: "i" },
+  { key: "j", text: "Diabetes", value: "j" },
+  { key: "k", text: "HIV", value: "k" },
+  { key: "l", text: "Chronic Illness", value: "l" },
+  { key: "n", text: "Muscular", value: "n" },
+  { key: "o", text: "Nervous System", value: "o" },
+  { key: "p", text: "Allergies", value: "p" },
+  { key: "q", text: "Medications", value: "q" },
+  { key: "r", text: "Holistic Treaments", value: "r" },
+  { key: "s", text: "Stomach Ulcers", value: "s" },
+  { key: "t", text: "COVID-19", value: "t" },
+  { key: "u", text: "Inflammation", value: "u" },
+  { key: "v", text: "Hypertension", value: "v" },
 ];
 
 const countryOptions = [
@@ -60,6 +60,12 @@ const countryOptions = [
   { key: "be", value: "be", flag: "be", text: "Belgium" },
   { key: "bz", value: "bz", flag: "bz", text: "Belize" },
   { key: "bj", value: "bj", flag: "bj", text: "Benin" },
+];
+const serviceOptions = [
+  { key: "c", text: "Community", value: "c" },
+  { key: "a", text: "Analyze Medical Text for Understanding", value: "a" },
+  { key: "s", text: "Summarizing Documents or Articles", value: "a" },
+  { key: "q", text: "Asking Questions", value: "q" },
 ];
 
 const optionsGender = [
@@ -244,11 +250,11 @@ class Onboard extends React.Component {
                       I'm specifically interested in the following services ...{" "}
                     </h5>
                     <Dropdown
-                      placeholder="Interests"
+                      placeholder="Services"
                       fluid
                       multiple
                       selection
-                      options={}
+                      options={serviceOptions}
                     />
                     <Divider hidden />
                     <Form.Group widths="equal">
