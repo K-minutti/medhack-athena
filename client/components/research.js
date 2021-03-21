@@ -6,12 +6,16 @@ const Research = () => {
   return (
     <div className="landing">
       <Container>
+        <div style={{ height: "200px" }}></div>
         <Divider hidden />
-        <h1>Athena + SumMed</h1>
+        <h1 style={{ color: "#239e79", fontSize: "100px" }}>Athena + SumMed</h1>
 
         {/* <Image src={one} size="medium" /> */}
 
         <Divider hidden />
+        <Divider hidden />
+        <Divider hidden />
+        <div style={{ height: "400px" }}></div>
         <Divider hidden />
         <Divider hidden />
         <h1>Communtiy</h1>
@@ -24,19 +28,19 @@ const Research = () => {
         </h2>
         <Divider hidden />
         <Divider hidden />
-
+        <div style={{ height: "240px" }}></div>
         <Divider hidden />
         <Divider hidden />
         <Divider hidden />
         <Divider hidden />
-        <h4>AI has a place in the a product like Athena in the areas of:</h4>
-        <h5>User Verification</h5>
-        <h5>Community Policing</h5>
-        <h5>Generating Recommendations</h5>
-        <h5>Areas Covered by SumMed: Labeling, Analysis, Summarizing</h5>
-        <h2>
+        <h1>AI has a place in the a product like Athena in the areas of:</h1>
+        <h2>User Verification</h2>
+        <h2>Community Policing</h2>
+        <h2>Generating Recommendations</h2>
+        <h2>Areas Covered by SumMed: Labeling, Analysis, Summarizing</h2>
+        <h1>
           <a>COMMUNITY + AI/ML = NEW INSIGHTS</a>
-        </h2>
+        </h1>
       </Container>
       <Divider hidden />
     </div>
